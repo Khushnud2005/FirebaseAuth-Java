@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/drawable/ic_add.xml" value="0.1805" />
         <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/drawable/ic_notifications.xml" value="0.1805" />
+        <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/layout/activity_create.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/layout/activity_edit.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/layout/activity_sign_up.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/layout/activity_splash.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/SuperJet/AndroidStudioProjects/FirebaseAuthJava/app/src/main/res/layout/item_posts.xml" value="0.22083333333333333" />
       </map>
     </option>
   </component>
