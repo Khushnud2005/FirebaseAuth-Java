@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.daimajia.swipe.SwipeLayout;
 
 import java.util.ArrayList;
@@ -51,6 +53,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
         holder.tv_title.setText(item.getTitle());
         holder.tv_body.setText(item.getBody());
+        if (item.getImage() != null){
+            holder.ll_image_layer.setVisibility(View.VISIBLE);
+            Glide.with(activity).asBitmap().load(item.getImage()).into(holder.iv_photo_post);
+        }
 
         holder.tv_delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +72,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 intent.putExtra("id",item.getId());
                 intent.putExtra("title", item.getTitle());
                 intent.putExtra("body", item.getBody());
+                if (item.getImage() != null){
+                    intent.putExtra("image", item.getImage());
+                }
                 //activity.setResult(88,intent);
                 activity.startActivity(intent);
             }
@@ -83,18 +92,22 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         TextView tv_body;
         LinearLayout linear_left;
         LinearLayout linear_right;
+        LinearLayout ll_image_layer;
         SwipeLayout sl_swipe;
         TextView tv_delete;
         TextView tv_edit;
+        ImageView iv_photo_post;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_title = itemView.findViewById(R.id.tv_title_item);
             tv_body = itemView.findViewById(R.id.tv_body_item);
             linear_right = itemView.findViewById(R.id.ll_linear_right);
             linear_left = itemView.findViewById(R.id.ll_linear_left);
+            ll_image_layer = itemView.findViewById(R.id.ll_image_layer);
             sl_swipe = itemView.findViewById(R.id.sl_swipe);
             tv_delete = itemView.findViewById(R.id.tv_delete);
             tv_edit = itemView.findViewById(R.id.tv_edit);
+            iv_photo_post = itemView.findViewById(R.id.iv_photo_post);
         }
     }
 }
